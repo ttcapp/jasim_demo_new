@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jasim_demo/second_page.dart';
 import 'package:jasim_demo/utills/all_colors.dart';
 import 'package:jasim_demo/utills/all_string.dart';
+import 'package:slide_drawer/slide_drawer.dart';
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
@@ -16,6 +17,12 @@ class _MyHomePageState extends State<MyHomePage> {
     double width=MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.menu),
+          // call toggle from SlideDrawer to alternate between open and close
+          // when pressed menu button
+          onPressed: () => SlideDrawer.of(context)!.toggle(),
+        ),
         centerTitle: true,
         backgroundColor: AllColors.appBarClkr,
         title: Text(AllString.Jasim),
