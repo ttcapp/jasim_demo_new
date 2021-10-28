@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jasim_demo/second_page.dart';
+import 'package:jasim_demo/third_page.dart';
 import 'package:jasim_demo/utills/all_colors.dart';
 import 'package:jasim_demo/utills/all_string.dart';
 import 'package:slide_drawer/slide_drawer.dart';
@@ -40,6 +41,13 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Expanded(
             child: Column(
               children: [
+                ElevatedButton(
+                    onPressed: (){
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context)=>ThirdPage()));
+                    },
+                    child: Text("button two")),
+
                 Padding(
                   padding: const EdgeInsets.only(
                     top: 5, bottom: 5,left: 25,right: 25
